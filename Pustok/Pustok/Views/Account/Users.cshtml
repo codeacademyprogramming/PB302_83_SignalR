@@ -1,0 +1,33 @@
+﻿@model List<AppUser>
+@{
+    ViewData["Title"] = "Users";
+}
+
+<h1>Users</h1>
+
+<section class="breadcrumb-section">
+    <h2 class="sr-only">Site Breadcrumb</h2>
+    <div class="container">
+        <div class="breadcrumb-contents">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                    <li class="breadcrumb-item active">Shop</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+</section>
+<main class="inner-page-sec-padding-bottom">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-9 order-lg-2">
+                <ul class="list-group">
+                    @foreach(var item in Model){
+                        <li data-id="@item.Id" class="list-group-item" style="color:@(item.ConnectionId!=null?"green":"black")"><span></span> @item.FullName</li>
+                    }
+                </ul>
+            </div>
+        </div>
+    </div>
+</main>

@@ -1,0 +1,67 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <div class="container">
+        <div class="row p-1">
+            <div class="col-1">User</div>
+            <div class="col-5"><input type="text" class="w-100" id="userInput" /></div>
+        </div>
+        <div class="row p-1">
+            <div class="col-1">Message</div>
+            <div class="col-5"><input type="text" class="w-100" id="messageInput" /></div>
+        </div>
+        <div class="row p-1">
+            <div class="col-6 text-end">
+                <input type="button" id="sendButton" value="Send Message" />
+            </div>
+        </div>
+        <div class="row p-1">
+            <div class="col-6">
+                <hr />
+            </div>
+        </div>
+        <div class="row p-1">
+            <div class="col-6">
+                <ul id="messagesList"></ul>
+            </div>
+        </div>
+    </div>
+
+    @section Scripts{
+
+        <script>
+            var connection = new signalR.HubConnectionBuilder().withUrl("/hub").build();
+
+            connection.start().then(function () {
+
+            }).catch(function (err) {
+                return console.error(err.toString());
+            });
+
+            connection.on("ReceiveMessage", function (username, msg) {
+                var li = document.createElement("li");
+                document.getElementById("messagesList").appendChild(li);
+                li.textContent = `${username}: ${msg}`;
+            })
+
+            connection.on("ShowConnected",function(){
+                console.log("Someone connected to the hub");
+            })
+
+
+            document.getElementById("sendButton").addEventListener("click", function (event) {
+                var user = document.getElementById("userInput").value;
+                var message = document.getElementById("messageInput").value;
+                connection.invoke("SendMessage", user, message).catch(function (err) {
+                    return console.error(err.toString());
+                });
+                event.preventDefault();
+            });
+
+
+
+
+        </script>
+    }

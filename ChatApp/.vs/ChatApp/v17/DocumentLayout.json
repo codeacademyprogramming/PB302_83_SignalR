@@ -1,0 +1,105 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\elchin\\Desktop\\CodeLesson\\83. 17-05-2024\\ChatApp\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{831B5420-A920-431E-B093-2E3A97E55BA5}|ChatApp\\ChatApp.csproj|c:\\users\\elchin\\desktop\\codelesson\\83. 17-05-2024\\chatapp\\chatapp\\chathub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{831B5420-A920-431E-B093-2E3A97E55BA5}|ChatApp\\ChatApp.csproj|solutionrelative:chatapp\\chathub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{831B5420-A920-431E-B093-2E3A97E55BA5}|ChatApp\\ChatApp.csproj|c:\\users\\elchin\\desktop\\codelesson\\83. 17-05-2024\\chatapp\\chatapp\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{831B5420-A920-431E-B093-2E3A97E55BA5}|ChatApp\\ChatApp.csproj|solutionrelative:chatapp\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{831B5420-A920-431E-B093-2E3A97E55BA5}|ChatApp\\ChatApp.csproj|c:\\users\\elchin\\desktop\\codelesson\\83. 17-05-2024\\chatapp\\chatapp\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{831B5420-A920-431E-B093-2E3A97E55BA5}|ChatApp\\ChatApp.csproj|solutionrelative:chatapp\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{831B5420-A920-431E-B093-2E3A97E55BA5}|ChatApp\\ChatApp.csproj|c:\\users\\elchin\\desktop\\codelesson\\83. 17-05-2024\\chatapp\\chatapp\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{831B5420-A920-431E-B093-2E3A97E55BA5}|ChatApp\\ChatApp.csproj|solutionrelative:chatapp\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{831B5420-A920-431E-B093-2E3A97E55BA5}|ChatApp\\ChatApp.csproj|c:\\users\\elchin\\desktop\\codelesson\\83. 17-05-2024\\chatapp\\chatapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{831B5420-A920-431E-B093-2E3A97E55BA5}|ChatApp\\ChatApp.csproj|solutionrelative:chatapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\elchin\\Desktop\\CodeLesson\\83. 17-05-2024\\ChatApp\\ChatApp\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "ChatApp\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\elchin\\Desktop\\CodeLesson\\83. 17-05-2024\\ChatApp\\ChatApp\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "ChatApp\\Views\\Home\\Index.cshtml",
+              "ViewState": "AQIAAB8AAAAAAAAAAAAAADEAAAA8AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-05-17T16:58:12.519Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\elchin\\Desktop\\CodeLesson\\83. 17-05-2024\\ChatApp\\ChatApp\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "ChatApp\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\elchin\\Desktop\\CodeLesson\\83. 17-05-2024\\ChatApp\\ChatApp\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "ChatApp\\Controllers\\HomeController.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAA8AAAAeAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-17T16:58:08.192Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\elchin\\Desktop\\CodeLesson\\83. 17-05-2024\\ChatApp\\ChatApp\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "ChatApp\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\elchin\\Desktop\\CodeLesson\\83. 17-05-2024\\ChatApp\\ChatApp\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "ChatApp\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AQIAACUAAAAAAAAAAAAAAC8AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-05-17T16:55:20.695Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\elchin\\Desktop\\CodeLesson\\83. 17-05-2024\\ChatApp\\ChatApp\\Program.cs",
+              "RelativeDocumentMoniker": "ChatApp\\Program.cs",
+              "ToolTip": "C:\\Users\\elchin\\Desktop\\CodeLesson\\83. 17-05-2024\\ChatApp\\ChatApp\\Program.cs",
+              "RelativeToolTip": "ChatApp\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAkAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-17T16:54:24.333Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ChatHub.cs",
+              "DocumentMoniker": "C:\\Users\\elchin\\Desktop\\CodeLesson\\83. 17-05-2024\\ChatApp\\ChatApp\\ChatHub.cs",
+              "RelativeDocumentMoniker": "ChatApp\\ChatHub.cs",
+              "ToolTip": "C:\\Users\\elchin\\Desktop\\CodeLesson\\83. 17-05-2024\\ChatApp\\ChatApp\\ChatHub.cs",
+              "RelativeToolTip": "ChatApp\\ChatHub.cs",
+              "ViewState": "AQIAAAUAAAAAAAAAAAAQwBQAAAA3AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-17T16:54:16.642Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
