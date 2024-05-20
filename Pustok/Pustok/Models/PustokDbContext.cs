@@ -24,6 +24,9 @@ namespace Pustok.Models
         public DbSet<BasketItem> BasketItems { get; set; }
         public DbSet<Order> Orders { get; set; }
         public DbSet<OrderItem> OrderItems { get; set; }
+        public DbSet<Teacher> Teachers { get; set; }
+        public DbSet<Skill> Skills { get; set; }
+        public DbSet<TeacherSkill> TeacherSkills { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

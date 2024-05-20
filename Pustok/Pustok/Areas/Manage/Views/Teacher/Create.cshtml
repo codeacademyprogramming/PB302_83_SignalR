@@ -1,0 +1,82 @@
+﻿@model Teacher
+@{
+    ViewData["Title"] = "Create";
+}
+
+<!-- Begin Page Content -->
+<div class="container-fluid">
+
+    <!-- Page Heading -->
+    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+        <h1 class="h3 mb-0 text-gray-800">Teacher</h1>
+        <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm">
+            Create
+        </a>
+    </div>
+    <div class="row">
+        <div class="col-md-8 mx-auto">
+            <form class="user" asp-action="create" method="post">
+                <div class="form-group">
+                    <label for="nameInput">Name</label>
+                    <input asp-for="FullName" class="form-control" id="nameInput" placeholder="Enter Name here..">
+                    <span class="text-danger" asp-validation-for="FullName"></span>
+                </div>
+                <div class="form-group" id="skillBox">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="skillInput">Skills</label>
+                                </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="skillInput">Value</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <select name="SkillIds" class="form-control"  asp-items="@(new SelectList(ViewBag.Skills,nameof(Skill.Id),nameof(Skill.Name)))">
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <input name="TeacherSkills[0].Percentage" class="form-control"  placeholder="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <span data-index="0" id="plusSkillInput" class="plus-btn">+</span>
+                    </div>
+                </div>
+                <button class="btn btn-primary" type="submit">
+                    Create Genre
+                </button>
+            </form>
+        </div>
+    </div>
+</div>
+
+@section scripts {
+    @Html.Partial("_ValidationScriptPartials");
+
+    <script>
+
+        document.getElementById("plusSkillInput").addEventListener("click", function (e) {
+            let dataIndex = $(this).attr("data-index")
+            dataIndex++;
+            console.log(dataIndex)
+            let lastRow = $("#skillBox .row").last().clone();
+            lastRow.find("input").attr("name", `TeacherSkills[${dataIndex}].Percentage`)
+            lastRow.find("select").attr("name", `TeacherSkills[${dataIndex}].SkillId`)
+
+            $("#skillBox").append(lastRow)
+
+            $(this).attr("data-index", dataIndex);
+        })
+    </script>
+}

@@ -253,7 +253,7 @@ namespace Pustok.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Authors");
+                    b.ToTable("Authors", (string)null);
                 });
 
             modelBuilder.Entity("Pustok.Models.BasketItem", b =>
@@ -280,7 +280,7 @@ namespace Pustok.Migrations
 
                     b.HasIndex("BookId");
 
-                    b.ToTable("BasketItems");
+                    b.ToTable("BasketItems", (string)null);
                 });
 
             modelBuilder.Entity("Pustok.Models.Book", b =>
@@ -339,7 +339,7 @@ namespace Pustok.Migrations
 
                     b.HasIndex("GenreId");
 
-                    b.ToTable("Books");
+                    b.ToTable("Books", (string)null);
                 });
 
             modelBuilder.Entity("Pustok.Models.BookImage", b =>
@@ -365,7 +365,7 @@ namespace Pustok.Migrations
 
                     b.HasIndex("BookId");
 
-                    b.ToTable("BookImages");
+                    b.ToTable("BookImages", (string)null);
                 });
 
             modelBuilder.Entity("Pustok.Models.BookReview", b =>
@@ -401,7 +401,7 @@ namespace Pustok.Migrations
 
                     b.HasIndex("BookId");
 
-                    b.ToTable("BookReviews");
+                    b.ToTable("BookReviews", (string)null);
                 });
 
             modelBuilder.Entity("Pustok.Models.BookTag", b =>
@@ -416,7 +416,7 @@ namespace Pustok.Migrations
 
                     b.HasIndex("TagId");
 
-                    b.ToTable("BookTags");
+                    b.ToTable("BookTags", (string)null);
                 });
 
             modelBuilder.Entity("Pustok.Models.Genre", b =>
@@ -443,7 +443,7 @@ namespace Pustok.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Genres");
+                    b.ToTable("Genres", (string)null);
                 });
 
             modelBuilder.Entity("Pustok.Models.Order", b =>
@@ -492,7 +492,7 @@ namespace Pustok.Migrations
 
                     b.HasIndex("AppUserId");
 
-                    b.ToTable("Orders");
+                    b.ToTable("Orders", (string)null);
                 });
 
             modelBuilder.Entity("Pustok.Models.OrderItem", b =>
@@ -527,7 +527,7 @@ namespace Pustok.Migrations
 
                     b.HasIndex("OrderId");
 
-                    b.ToTable("OrderItems");
+                    b.ToTable("OrderItems", (string)null);
                 });
 
             modelBuilder.Entity("Pustok.Models.Setting", b =>
@@ -542,7 +542,24 @@ namespace Pustok.Migrations
 
                     b.HasKey("Key");
 
-                    b.ToTable("Settings");
+                    b.ToTable("Settings", (string)null);
+                });
+
+            modelBuilder.Entity("Pustok.Models.Skill", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Skills", (string)null);
                 });
 
             modelBuilder.Entity("Pustok.Models.Slider", b =>
@@ -582,7 +599,7 @@ namespace Pustok.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Sliders");
+                    b.ToTable("Sliders", (string)null);
                 });
 
             modelBuilder.Entity("Pustok.Models.Tag", b =>
@@ -599,7 +616,50 @@ namespace Pustok.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Tags");
+                    b.ToTable("Tags", (string)null);
+                });
+
+            modelBuilder.Entity("Pustok.Models.Teacher", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("FullName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Teachers", (string)null);
+                });
+
+            modelBuilder.Entity("Pustok.Models.TeacherSkill", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<byte>("Percentage")
+                        .HasColumnType("tinyint");
+
+                    b.Property<int>("SkillId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("TeacherId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("SkillId");
+
+                    b.HasIndex("TeacherId");
+
+                    b.ToTable("TeacherSkills", (string)null);
                 });
 
             modelBuilder.Entity("Pustok.Models.AppUser", b =>
@@ -783,6 +843,25 @@ namespace Pustok.Migrations
                     b.Navigation("Order");
                 });
 
+            modelBuilder.Entity("Pustok.Models.TeacherSkill", b =>
+                {
+                    b.HasOne("Pustok.Models.Skill", "Skill")
+                        .WithMany()
+                        .HasForeignKey("SkillId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Pustok.Models.Teacher", "Teacher")
+                        .WithMany("TeacherSkills")
+                        .HasForeignKey("TeacherId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Skill");
+
+                    b.Navigation("Teacher");
+                });
+
             modelBuilder.Entity("Pustok.Models.Author", b =>
                 {
                     b.Navigation("Books");
@@ -810,6 +889,11 @@ namespace Pustok.Migrations
             modelBuilder.Entity("Pustok.Models.Tag", b =>
                 {
                     b.Navigation("Tags");
+                });
+
+            modelBuilder.Entity("Pustok.Models.Teacher", b =>
+                {
+                    b.Navigation("TeacherSkills");
                 });
 #pragma warning restore 612, 618
         }

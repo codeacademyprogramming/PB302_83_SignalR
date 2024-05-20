@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\elchin\\Desktop\\CodeLesson\\83. 17-05-2024\\Pustok\\Pustok\\Pustok.csproj": {}
+    "C:\\Users\\elchin\\Desktop\\CodeLesson\\83. 17-05-2024\\PB302_83_SignalR\\Pustok\\Pustok\\Pustok.csproj": {}
   },
   "projects": {
-    "C:\\Users\\elchin\\Desktop\\CodeLesson\\83. 17-05-2024\\Pustok\\Pustok\\Pustok.csproj": {
+    "C:\\Users\\elchin\\Desktop\\CodeLesson\\83. 17-05-2024\\PB302_83_SignalR\\Pustok\\Pustok\\Pustok.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\elchin\\Desktop\\CodeLesson\\83. 17-05-2024\\Pustok\\Pustok\\Pustok.csproj",
+        "projectUniqueName": "C:\\Users\\elchin\\Desktop\\CodeLesson\\83. 17-05-2024\\PB302_83_SignalR\\Pustok\\Pustok\\Pustok.csproj",
         "projectName": "Pustok",
-        "projectPath": "C:\\Users\\elchin\\Desktop\\CodeLesson\\83. 17-05-2024\\Pustok\\Pustok\\Pustok.csproj",
+        "projectPath": "C:\\Users\\elchin\\Desktop\\CodeLesson\\83. 17-05-2024\\PB302_83_SignalR\\Pustok\\Pustok\\Pustok.csproj",
         "packagesPath": "C:\\Users\\elchin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\elchin\\Desktop\\CodeLesson\\83. 17-05-2024\\Pustok\\Pustok\\obj\\",
+        "outputPath": "C:\\Users\\elchin\\Desktop\\CodeLesson\\83. 17-05-2024\\PB302_83_SignalR\\Pustok\\Pustok\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

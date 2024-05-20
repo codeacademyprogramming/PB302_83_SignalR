@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "08kma4LEn2VgVinEGGfE2ydjbFli/ToK3rsC02Dam26EAtK7FW5dCQ5JepzzqDYOOMmzzRWJ59JJsSgSzagkuw==",
+  "dgSpecHash": "qkZok3qrW4+/BjMlbxHfq88cHw3YJZbugr46qGl7oiHMnZrEeKHFgjvifzElXPpftdNBxAwv/ukSeijOImi5mQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\elchin\\Desktop\\CodeLesson\\83. 17-05-2024\\Pustok\\Pustok\\Pustok.csproj",
+  "projectFilePath": "C:\\Users\\elchin\\Desktop\\CodeLesson\\83. 17-05-2024\\PB302_83_SignalR\\Pustok\\Pustok\\Pustok.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\elchin\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\elchin\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",
